@@ -1,0 +1,9 @@
+---
+- hosts: default
+  tasks:
+  - name: Creating an empty file
+    become: yes
+    become_user: root
+    file:
+      path: "/etc/test-textfile.txt"
+      state: touch
